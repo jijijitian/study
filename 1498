@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:351602 -PID:1498 -RES:4 -LANG:1
+
+	int i, j;
+	cin >> i >> j;
+	if (j > 3 * i)
+	{
+		cout << 50 * j;
+	}
+	else if (j > 2 * i)
+	{
+		cout << 30 * j;
+	}
+	else if (j > i)
+	{
+		cout << 20 * j;
+	}
+	else
+	{
+		cout << 10 * j;
+	}
+	return 0;
+}
