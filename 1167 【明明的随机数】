@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+
+int sort(int n, int* p) //排序函数
+{
+	int t;
+	for (int i = 0; i < n - 1; i++)
+	{
+		for (int j = 0; j < n - 1 - i; j++)
+		{
+			if (p[j] > p[j + 1])
+			{
+				t = p[j];
+				p[j] = p[j + 1];
+				p[j + 1] = t;
+			}
+		}
+	}
+	return 0;
+}
+
+int main()
+{
+	int n, arr1[100], arr2[100],count,i,j;
+	cin >> n;
+	count = n;
+	for (int i = 0; i < n; i++)
+		cin >> arr1[i];
+	for (i = 0; i < n - 1; i++) //去重
+	{
+		for (j = i + 1; j < n; j++)
+		{
+			if (arr1[i] == arr1[j])
+			{
+				arr1[i] = 0;
+				count--;
+			}
+		}
+	}
+	for (i = j = 0; i < n; i++)
+		if (arr1[i] != 0)
+		{
+			arr2[j] = arr1[i];
+			j++;
+		}
+	sort(count, arr2);
+	cout << count << endl;
+	for (i = 0; i < count; i++)
+		cout << arr2[i] << " ";
+}
