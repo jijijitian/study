@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:353632 -PID:1115 -RES:4 -LANG:1
+
+	int num;
+	cin >> num;
+	int num1 = num % 10;
+	int num2 = num / 10 % 10;
+	int num3 = num / 100;
+	int num4 = (num1 * num1 * num1) + (num2 * num2 * num2) + (num3 * num3 * num3);
+	if (num == num4)
+	{
+		cout << "1";
+	}
+	else
+	{
+		cout << "0";
+	}
+	return 0;
+}
