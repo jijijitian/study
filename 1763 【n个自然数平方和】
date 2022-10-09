@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:354867 -PID:1763 -RES:4 -LANG:1
+
+	int n,a=0;
+	cin >> n;
+	for (int i = 1; i <= n; i++)
+	{
+		a = i * i +a;
+	}
+	cout << a;
+	return 0;
+}
