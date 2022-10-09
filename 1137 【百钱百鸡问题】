@@ -1,0 +1,23 @@
+#include"stdio.h"
+
+int main(void)
+{
+    int cd,cm,c;
+    for(cd = 0;cd <= 20;cd++)
+    {
+        for(cm = 0;cm <= 34 ;cm++)
+        {
+            for(c = 0; c <= 300; c++)
+            {
+                if((cd * 5) + (cm * 3) + (c / 3) == 100 && cd + cm + c == 100 && c % 3 == 0)
+                {
+                    printf("cock=%d,",cd);
+                    printf("hen=%d,",cm);
+                    printf("chicken=%d\n",c);
+                }
+            }
+        }
+    }
+    system("pause");
+    return 0;
+}
