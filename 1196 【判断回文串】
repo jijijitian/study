@@ -1,0 +1,22 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:351830 -PID:1196 -RES:4 -LANG:1
+
+	string a,b;
+	cin >> a;
+	b = a;
+	reverse(b.begin(), b.end());
+	if (a == b)
+	{
+		cout << "Y";
+	}
+	else
+	{
+		cout << "N";
+	}
+	return 0;
+}
