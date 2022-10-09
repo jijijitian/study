@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+void del_char(char* p, char ch)
+{
+	int i, j;
+	for (i = j = 0; p[i]; i++)
+		if (p[i] != ch)
+			p[j++] = p[i];
+	p[j] = p[i];
+}
+int main()
+{
+	char ch, s[100];
+	ch = cin.get();
+	cin >> s;
+	del_char(s, ch);
+	cout << s;
+}
