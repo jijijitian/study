@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:355695 -PID:1146 -RES:4 -LANG:1
+
+	int n;
+	double t=0;
+	cin >> n;
+	for (int i = 1; i <= n; i++)
+	{
+		double j = i;
+		t += 1 / j;
+	}
+	printf("%.6f", t);
+}
