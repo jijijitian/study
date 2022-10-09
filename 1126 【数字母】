@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:355708 -PID:1126 -RES:4 -LANG:1
+
+	string s;
+	int num=0;
+	cin >> s;
+	for (int i = 0; i < s.size(); i++)
+	{
+		if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
+		{
+			num++;
+		}
+	}
+	cout << num;
+}
