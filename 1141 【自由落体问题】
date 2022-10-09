@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:360816 -PID:1141 -RES:4 -LANG:1
+
+	double h = 100,sum = 0;
+	int N;
+	cin >> N;
+	for (int i = 1; i <= N; i++)
+	{
+		
+		if (i == 1)
+		{
+			sum = 100;
+		}
+		else
+		{
+			h = h / 2;
+			sum = sum  + (2 * h);
+		}
+	}
+	printf("%.4f",sum);
+}
