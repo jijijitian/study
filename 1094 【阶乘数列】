@@ -1,0 +1,17 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:361121 -PID:1094 -RES:4 -LANG:1
+
+	double num = 0;
+	double m = 1;
+	for (int i = 1; i <= 30; i++)
+	{
+		m *= i;
+		num += m;
+	}
+	printf("%.2e", num);
+}
