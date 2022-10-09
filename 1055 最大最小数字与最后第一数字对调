@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:354953 -PID:1055 -RES:4 -LANG:1
+
+	int arr[10],t;
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> arr[i];
+	}
+	t = arr[0];
+	for (int i = 0; i < 10; i++)
+	{
+		if (t > arr[i])
+		{
+			t = arr[i];
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		if (t == arr[i])
+		{
+			arr[i] = arr[0];
+			arr[0] = t;
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		if (t < arr[i])
+		{
+			t = arr[i];
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		if (t == arr[i])
+		{
+			arr[i] = arr[9];
+			arr[9] = t;
+		}
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		cout << arr[i] <<" ";
+	}
+	return 0;
+}
