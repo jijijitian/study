@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+//这道题想了好久没写出来，于是上网查了思路理解了下写了一遍
+int main()
+{
+	int n,arr[100];
+	cin >> n; //输入初始人数n；
+	int restnum = 0, count = 0, round = 0;
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = i + 1;
+	}
+	restnum = n; //初始化剩余人数
+	while (restnum > 1)
+	{
+		round = 0; //对轮数进行初始化
+		while (round < n)
+		{
+			if (arr[round] != 0)
+			{
+				count++;
+				if (count == 3)
+				{
+					restnum--;
+					count = 0;
+					arr[round] = 0;//以0作为退出的标识
+				}
+			}
+			round++;
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] != 0)
+			cout << arr[i];
+	}
+}
