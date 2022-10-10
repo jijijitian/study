@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int transform(int n)
+{
+	int arr[17], i = 0;
+	while (n)
+	{
+		arr[i++] = n % 2;
+		n /= 2;
+	}
+	for (int j = i - 1; j >= 0; j--)
+		cout << arr[j];
+	return 0;
+}
+
+int main()
+{
+    // From IMUDGESOJ -RID:367971 -PID:1188 -RES:4 -LANG:1
+
+	int n;
+	while (cin >> n)
+	{
+		if (n > 0)
+		{
+			cout << n << "-->";
+			transform(n);
+			cout << endl;
+		}
+		else if (n == 0)
+			cout << "0-->0" << endl;
+		else
+		{
+			cout << n << "-->-";
+			n = abs(n);
+			transform(n);
+			cout << endl;
+		}
+	}
+}
