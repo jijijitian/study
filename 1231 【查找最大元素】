@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:367988 -PID:1231 -RES:4 -LANG:1
+
+	string s;
+	while (cin >> s)
+	{
+		char c = '0';
+		for (int i = 0; i < s.size(); i++)
+		{
+			if (s[i] > c)
+				c = s[i];
+		}
+		for (int i = 0; i < s.size(); i++)
+		{
+			if (s[i] == c)
+				cout << c << "(max)";
+			else
+				cout << s[i];
+		}
+		cout << endl;
+	}
+}
