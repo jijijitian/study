@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    // From IMUDGESOJ -RID:373361 -PID:2206 -RES:4 -LANG:1
+
+	int t, n1, n2, a1[100], a2[100], same, num;
+	cin >> t;
+	for (int i = 0; i < t; i++)
+	{
+		same = 0;
+		cin >> n1;
+		for (int j = 0; j < n1; j++)
+			cin >> a1[j];
+		cin >> n2;
+		for (int j = 0; j < n2; j++)
+			cin >> a2[j];
+		for (int j = 0; j < n1; j++)
+			for (int k = 0; k < n2; k++)
+				if (a1[j] == a2[k])
+					same++;
+		num = n1 + n2 - same;
+		cout << num << endl;
+	}
+}
