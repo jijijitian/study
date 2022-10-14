@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	string s;
+	int f, total;
+	while (getline(cin, s))
+	{
+		f = 0;
+		total = 0;
+		for (int i = 0; i < s.size() - 1; i++)
+		{
+			if (s[i] == '/' && s[i + 1] == '*')
+			{
+				f++;
+				total++;
+			}
+			else if (s[i] == '*' && s[i + 1] == '/')
+			{
+				f--;
+				total++;
+			}
+		}
+		if (f == 0 && total == 2 || (f == 0 && total == 0))
+			cout << s << endl;
+	}
+}
