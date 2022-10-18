@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+struct student
+{
+	string s;
+	int a;
+	int b;
+	int c;
+};
+
+int main()
+{
+	student s[100];
+	int a[100], b[100];
+	int t = 0;
+	while (cin >> s[t].s >> s[t].a >> s[t].b >> s[t].c)
+		t++;
+	for (int i = 0; i <= t; i++)
+	{
+		a[i] = s[i].a + s[i].b + s[i].c;
+		b[i] = i;
+	}
+	for (int i = 0; i < t; i++)
+		for (int j = 0; j < t - i; j++)
+			if (a[j] < a[j + 1])
+			{
+				swap(a[j], a[j + 1]);
+				swap(b[j], b[j + 1]);
+			}
+	for (int i = 0; i < t; i++)
+		cout << s[b[i]].s << " " << s[b[i]].a << " " << s[b[i]].b << " " << s[b[i]].c << endl;
+}
