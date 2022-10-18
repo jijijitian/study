@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int m , n = 0, t;
+	int s[100];
+	cin >> m;
+	while (m > 0)
+	{
+		s[n] = m % 12;
+		m /= 12;
+		n++;
+	}
+	for (int i = n - 1; i >= 0; i--)
+	{
+		if (s[i] == 10)
+			cout << "A";
+		else if (s[i] == 11)
+			cout << "B";
+		else
+			cout << s[i];
+	}
+}
