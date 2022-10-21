@@ -1,0 +1,43 @@
+#include<iostream>
+#include<string>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+	string a;
+	int t = 0;
+	int w = 0, l = 0;
+	getline(cin, a, 'E');
+	t = a.size();
+	for (int i = 0; i < t; i++)
+	{
+		if (a[i] == 'W')
+			w++;
+		else if (a[i] == 'L')
+			l++;
+		if ((w >= 11 || l >= 11) && abs(w - l) >= 2)
+		{
+			cout << w << ":" << l << endl;
+			w = 0;
+			l = 0;
+		}
+	}
+	cout << w << ":" << l << endl << endl;
+	w = 0;
+	l = 0;
+	for (int i = 0; i < t; i++)
+	{
+		if (a[i] == 'W')
+			w++;
+		else if (a[i] == 'L')
+			l++;
+		if ((w >= 21 || l >= 21) && abs(w - l) >= 2)
+		{
+			cout << w << ":" << l << endl;
+			w = 0;
+			l = 0;
+		}
+	}
+	cout << w << ":" << l;
+}
