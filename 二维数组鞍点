@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a[10][10];
+	int hang, lie;
+	cin >> hang >> lie;
+	for (int i = 0; i < hang; i++)
+		for (int j = 0; j < lie; j++)
+			cin >> a[i][j];
+	for (int i = 0; i < hang; i++)
+	{
+		int max = a[i][0];
+		for (int j = 0; j < lie; j++)
+			if (a[i][j] > max)
+				max = a[i][j];
+		for (int j = 0; j < lie; j++)
+			if (max == a[i][j])
+			{
+				int min = a[0][j];
+				for (int k = 0; k < hang; k++)
+					if (a[k][j] < min)
+						min = a[k][j];
+				if (max == min)
+					cout << i << ' ' << j << ' ' << a[i][j];
+				break;
+			}
+	}
+}
